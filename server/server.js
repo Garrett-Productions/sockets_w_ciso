@@ -32,6 +32,5 @@ io.on('connection', (socket) => { // io.on, like an onChange, or onSubmit
     console.log(chalk.greenBright(`New user connected: ${socket.id}`));
     socket.on('chat-message', (message) => {
         console.log(message);
-    })
-
-}) 
+    });
+});
