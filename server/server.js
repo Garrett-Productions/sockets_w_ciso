@@ -10,3 +10,5 @@ const port = process.env.PORT;
 // const print = console.log
 
 app.use(cors());
+
+app.listen(port, ()=> console.log(chalk.cyan(`Listening on PORT: ${port}`)));
