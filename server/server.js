@@ -16,4 +16,13 @@ const httpServer = app.listen(port, () =>
 console.log(chalk.cyan(`Listening on PORT: ${port}`)));
 
 // io is our socket server
-const io = new SocketServer(httpServer)// this is a class taking in a server as a variable!
+const io = new SocketServer(httpServer, { // this is a class taking in a server as a variable!
+    cors: {
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST'],
+        allowedHeaders: ['*'],
+        credentials: true,
+    }
+})
+
+io.on('connection') // whenever a client connects to our socket server, its an event our server listens for
