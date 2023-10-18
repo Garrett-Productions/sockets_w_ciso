@@ -26,3 +26,4 @@ const io = new SocketServer(httpServer, { // this is a class taking in a server 
 })
 
 io.on('connection') // whenever a client connects to our socket server, its an event our server listens for
+// our callback specifies what needs to happen
