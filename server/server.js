@@ -30,6 +30,8 @@ const io = new SocketServer(httpServer, { // this is a class taking in a server 
 
 io.on('connection', (socket) => { // io.on, like an onChange, or onSubmit
     console.log(chalk.greenBright(`New user connected: ${socket.id}`));
-    socket.on('chat-message')
+    socket.on('chat-message', (message) => {
+        console.log(message);
+    })
 
 }) 
