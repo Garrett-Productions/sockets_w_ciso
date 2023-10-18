@@ -2,7 +2,7 @@ import express from 'express' ; // common JS import syntax
 import chalk from 'chalk'; // enabling easy backend syntax with type: module in package.json
 import dotenv from 'dotenv'; // .ENV PACKAGE
 import cors from 'cors';
-import { Server } from 'socket.io';
+import { Server } from 'socket.io'; // rename with curly braces in {}
 
 dotenv.config();
 
