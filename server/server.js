@@ -11,4 +11,5 @@ const port = process.env.PORT;
 
 app.use(cors());
 
-app.listen(port, ()=> console.log(chalk.cyan(`Listening on PORT: ${port}`)));
+const httpServer = app.listen(port, () => 
+console.log(chalk.cyan(`Listening on PORT: ${port}`)));
