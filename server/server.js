@@ -1,0 +1,1 @@
+const express = require('express'); // common JS import syntax
