@@ -26,7 +26,10 @@ const io = new SocketServer(httpServer, { // this is a class taking in a server 
 })
 // whenever a client connects to our socket server, 
 //its an event our server listens for, our callback specifies what needs to happen
+//our call back is below!
 
-io.on('connection', (socket) => {
-    console.log(chalk.greenBright(`New user connected: ${socket.id}`))
+io.on('connection', (socket) => { // io.on, like an onChange, or onSubmit
+    console.log(chalk.greenBright(`New user connected: ${socket.id}`));
+    socket.on('chat-message')
+
 }) 
