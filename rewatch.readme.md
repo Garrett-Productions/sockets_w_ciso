@@ -1,13 +1,11 @@
 Discussion
 
-ImageKit.io, it works with URL imputs 
-
+* ImageKit.io, it works with URL imputs 
 1. Imagekit includes 'image transformations' within the url.
 Ex) /demo/tr:w-300,h-300/medium.jpg
 2. Water marking can be used in the url as well
 
-
-Server Sides- Video 1 Notes
+Server Sides - Video 1 Notes(45 min)
 
 * What is a Socket?
 
