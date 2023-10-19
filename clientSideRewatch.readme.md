@@ -8,13 +8,14 @@ Initial setup
 
 We cleaned up App.jsx and deleted app.css and index.css
 
-Side Notes {
+Side Notes-overalls-big scale {
     *Create components
 }
 
-Steps
+Steps - micro 
 * form for user to enter their name so they can display ii
     with every chat message
+
 function App(){
     rerurn <div>App</div>
 }
