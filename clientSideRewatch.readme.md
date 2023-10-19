@@ -1,10 +1,7 @@
-MKDIR client
-cd client
--- install vite
-npm create vite@latest . // this creates our app in our client folder, create it in the current directory
-npm i  && npm run dev
-npm i bootstrap in client
-delete all unneccesary files from client 
-bring in imports into Main.jsx
+Client Side 
+
+Initial setup
+
+* MKDIR client - cd client - npm create vite@latest . - npm i && npm run dev - npm i bootstrap - delete unneccesary files - bring 2 imports into main.jsx for bootstrap
     import 'bootstrap/dist/css/bootstrap.min.css';
     import 'bootstrap/dist/js/bootstrap.bundle.min.js';
