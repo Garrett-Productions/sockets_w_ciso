@@ -33,6 +33,7 @@ Installs(setup)
 Side Notes
     in Package.Json {"type":"module"} so that we can have english looking imports instead of const express=require('express')
     Create .env with PORT variable (PORT = 8000)
+    Whenever you hover over an HTML element, whatever is after the colon is what it's returning
 --
 Server.js
 import chalk from 'chalk'
