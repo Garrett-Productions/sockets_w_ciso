@@ -40,6 +40,7 @@ Side Notes
 ------------------------------------------------------------------------
 
 Server.js
+
 import chalk from 'chalk'
 import cors from 'cors'
 import dotenv from 'dotenv'
