@@ -23,7 +23,7 @@ function EnterChat() {
     <div className='card-body'>
       <form onSubmit={handleSubmit}>
         <label htmlFor='username' className='form-label'>
-          Ypur name:
+          Your name:
         </label>
         <div className='d-flex gap-2'>
           <input 
