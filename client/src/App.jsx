@@ -1,8 +1,11 @@
 function App() {
-  
+
   return (
-    <div>
-      App
+    <div className="d-flex justify-content-center  align-items-center  min-vh-100 ">
+      <div className="class-container">
+        
+      </div>
+      <EnterChat />
     </div>
   )
 }

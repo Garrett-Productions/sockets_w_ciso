@@ -10,3 +10,5 @@ to run project in dev mode, 'npm run dev'
 import chalk from 'chalk'; // enabling easy backend syntax with type: module
 import dotenv from 'dotenv'; // .ENV PACKAGE
 import cors from cors -->
+
+Static files like css put in public folder
