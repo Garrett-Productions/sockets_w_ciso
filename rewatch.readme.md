@@ -86,6 +86,9 @@ const io = new SocketServer(httpServer, {
 
 io.on('connection',(socket) => {
     console.log(chalk.greenBright(`New User connected: ${socket.id}`))
-})
+    socket.on('chat-message', (message) => {
+        console.log(message);
+    }); // when a user hits submit, its going to be a chat message event
+});
 --------------------------------------------
 
