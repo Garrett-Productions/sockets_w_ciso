@@ -3,6 +3,7 @@ import chalk from 'chalk'; // enabling easy backend syntax with type: module in 
 import dotenv from 'dotenv'; // .ENV PACKAGE
 import cors from 'cors';
 import { Server as SocketServer } from 'socket.io'; // rename with curly braces in {}
+import { v4 as uuidv4 } from 'uuid';
 
 dotenv.config();
 
@@ -32,5 +33,10 @@ io.on('connection', (socket) => { // io.on, like an onChange, or onSubmit
     console.log(chalk.greenBright(`New user connected: ${socket.id}`));
     socket.on('chat-message', (message) => {
         console.log(message);
+        const chatMessage = {
+            id: uuidv4(), // creating a unique ID w 3rd party package
+            ...message,
+        };
+        socket.broadcast.emit('chat-message', chatMessage)
     });
 });

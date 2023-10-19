@@ -21,7 +21,7 @@ function Chat(){
 
   return <div>
     <ChatCard />
-    <ChatForm />
+    <ChatForm  messages = {messages/>
     </div>
 }
 export default Chat;

@@ -15,3 +15,5 @@ Static files like css put in public folder
 
 
 When the web sopcket is closed, I want to close it, literally remove the listener
+
+npm install uuid to gebnerate an id int he sevrer
