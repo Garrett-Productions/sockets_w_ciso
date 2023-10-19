@@ -39,6 +39,15 @@ Side Notes
     * npm run dev or nodemon server.js to run the backend
     * make an instance of socket.io server through a var, and import it, so we'll have an http server var and a socket.io var
     * const io = this object allows each client to listen for events, and allows the server to listen for events coming from     the client, so we set io = to an instance of a socket server, we already have an httpserver var above.. and then import it from socket.io
+    * this is a whole instance setup of a socket server, taking 2 arguements
+        const io = new SocketServer(httpServer, {
+        cors: {
+            origin: 'http://localhost:5173',
+            methods: ['GET', 'POST'],
+            allowedHeaders: ['*'],
+            credentials: true
+        },
+    });
 ------------------------------------------------------------------------
 
 Server.js
@@ -58,8 +67,14 @@ app.use(cors())
 
 const httpServer = app.listen(port, () => console.log(chalk.cyan(`Listening on port ${port}`)))
 
-const io = new SocketServer(httpServer)
-// this object allows each client to listen for events, and allows the server to listen for events coming from the client 
-// set io to an instance of a socket server, we already have an httpserver var
+const io = new SocketServer(httpServer, {
+    cors: {
+        origin: 'http://localhost:5173',
+        methods: ['GET', 'POST'],
+        allowedHeaders: ['*'],
+        credentials: true
+    },
+});
+// set options with cors
 --------------------------------------------
 
