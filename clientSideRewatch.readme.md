@@ -30,4 +30,7 @@ function EnterChat(){
     return <div>Enterchat</div>
 }
 export default EnterChat;
+
+* We create a form
+* CSS Attributes used: card & shadow, card-body
 ----------------
