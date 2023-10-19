@@ -31,6 +31,8 @@ function EnterChat(){
 }
 export default EnterChat;
 
-* We create a form
-* CSS Attributes used: card & shadow, card-body
 ----------------
+* CSS Attributes used:
+    card & shadow, card-body
+
+* We create a form
