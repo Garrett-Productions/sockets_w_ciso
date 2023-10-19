@@ -36,9 +36,11 @@ Side Notes
     * Create .env with PORT variable (PORT = 8000)
     * Whenever you hover over an HTML element, whatever is after the colon is what it's returning,
         so for sockets, lets catch whatever app.listen is returning in a variable! (const httpServer)
+    * dotenv.config(); -- this enables all variables, then create your port variable in this file
     * npm run dev or nodemon server.js to run the backend
     * make an instance of socket.io server through a var, and import it, so we'll have an http server var and a socket.io var
     * const io = this object allows each client to listen for events, and allows the server to listen for events coming from     the client, so we set io = to an instance of a socket server, we already have an httpserver var above.. and then import it from socket.io
+
     * this is a whole instance setup of a socket server, taking 2 arguements
         const io = new SocketServer(httpServer, {
         cors: {
@@ -48,6 +50,7 @@ Side Notes
             credentials: true
         },
     });
+
     * notes on io.on('conenction', ()=> {})
         now we have an instance setup, so what do we do with it?
         attach it to an event listener and then have it respond accordingly!
@@ -56,6 +59,7 @@ Side Notes
         thats the event, then we 'll attach a call back for when its heard
         the callback will tak a paramter, that we get, from our connection event, (socket)
         everytime a new user connects to our socketserver, an ID will be generated, and thats what we are capturing here
+
     * notes on the callback in io.on
         * when a user hits submit, its going to be a chat message event
         .on takes in a string event, and a listener function
@@ -102,3 +106,4 @@ io.on('connection',(socket) => {
 });
 --------------------------------------------
 
+Now we create our client
