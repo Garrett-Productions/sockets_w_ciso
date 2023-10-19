@@ -75,6 +75,7 @@ const io = new SocketServer(httpServer, {
         credentials: true
     },
 });
-// set options with cors
+// now we have an instance setup, so what do we do with it?
+
 --------------------------------------------
 
