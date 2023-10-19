@@ -19,7 +19,7 @@ console.log(chalk.cyan(`Listening on PORT: ${port}`)));
 // io is our socket server
 const io = new SocketServer(httpServer, { // this is a class taking in a server as a variable!
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'http://localhost:5173',
         methods: ['GET', 'POST'],
         allowedHeaders: ['*'],
         credentials: true,
