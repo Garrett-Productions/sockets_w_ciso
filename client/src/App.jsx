@@ -1,3 +1,7 @@
+import { Routes, Route } from 'react-router-dom'
+import EnterChat from './components/EnterChat'
+import Chat from './components/Chat'
+
 function App() {
 
   return (

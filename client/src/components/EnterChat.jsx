@@ -2,8 +2,6 @@ import {useRef, useEffect, useContext } from 'react';
 import {NameContext} from "../context/NameContext";
 import {useNavigate} from 'react-router-dom';
 
-
-
 function EnterChat() {
   const nameInputRef = useRef();
   const { setName } = useContext(NameContext);
