@@ -21,3 +21,10 @@ Server Sides- Video 1 Notes
 
 
 OPENING UP VS
+Installs(setup)
+- Create server.js
+- npm init -y
+- npm i express dotenv socket.io chalk
+- npm i -D nodemon (even if its installed globally, this installs it as a dev dependency )
+
+- make a new script, scripts: {"dev":" nodemon server.js}
