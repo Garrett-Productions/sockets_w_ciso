@@ -37,6 +37,7 @@ Side Notes
     * Whenever you hover over an HTML element, whatever is after the colon is what it's returning,
         so for sockets, lets catch whatever app.listen is returning in a variable! (const httpServer)
     * npm run dev or nodemon server.js to run the backend
+    * make an instance of socket.io server through a var, and import it, so we'll have an http server var and a socket.io var
 ------------------------------------------------------------------------
 
 Server.js
@@ -45,6 +46,7 @@ import chalk from 'chalk'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
+import { Server as SocketServer } from 'socket.io'
 
 dotenv.config(); // this enables all variables, then create your port variable in this file
 
@@ -55,4 +57,8 @@ app.use(cors())
 
 const httpServer = app.listen(port, () => console.log(chalk.cyan(`Listening on port ${port}`)))
 
+const io = new SocketServer(httpServer)
+// this object allows each client to listen for events, and allows the server to listen for events coming from the client 
+// set io to an instance of a socket server, we already have an httpserver var
+--------------------------------------------
 
