@@ -30,14 +30,23 @@ Installs(setup)
 
 - make a new script, scripts: {"dev":" nodemon server.js}
 
-Side Note
-    in Package.Json
-    {"type":"module"} so that we can have english looking imports instead of const express=require('express')
+Side Notes
+    in Package.Json {"type":"module"} so that we can have english looking imports instead of const express=require('express')
+    Create .env with PORT variable (PORT = 8000)
 --
 Server.js
 import chalk from 'chalk'
+import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 
+dotenv.config(); // this enables all variables, then create your port variable in this file
+
 const app = express();
+const port = process.env.PORT;
+
+app.use(cors())
+
+app.listen(port, () => console.log(chalk.cyan(`Listening on port ${port}`)))
+
 
