@@ -16,7 +16,6 @@ Server Sides - Video 1 Notes(45 min)
 - The req-res cycle, as soon at that request, responds, the socket closes.
 - This means that we can not have a conversation because as soon as this response is done the socket closes.
 - HTTP FORGETS ABOUT EVERYTHING OCNE YOU SEND THAT RESPONSE.
-
 -Sockets give us the ability to listen for events, we're not sending request every minute to check, its always open, and listening 
 -Socket says "hey lemme know when you get a message, I'll receive it automatically."
 
