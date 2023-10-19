@@ -11,20 +11,23 @@ We cleaned up App.jsx and deleted app.css and index.css
 Side Notes-overalls-big scale {
     *Create components (EnterChat.jsx)
     * dark mode - index.html on line 2 data-bs-theme="dark"
+    * CSS folder goes into [App > public folder], make sure you put the link of css file in index.html
 }
 
 Steps - micro 
 * form for user to enter their name so they can display ii
     with every chat message
 
-
+----------------
 function App(){
     return <div>App</div>
 }
 export default App;
+-----------------
 
-
+-----------------
 function EnterChat(){
     return <div>Enterchat</div>
 }
 export default EnterChat;
+----------------
