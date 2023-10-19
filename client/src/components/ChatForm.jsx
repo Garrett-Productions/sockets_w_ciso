@@ -1,5 +1,5 @@
 import React from 'react'
-import {useRef, useEffect, useContext} from 'react';
+import {useRef, useContext} from 'react';
 import { NameContext } from '../context/NameContext';
 import io from 'socket.io-client';
 
@@ -10,6 +10,7 @@ function ChatForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(name)
     socket.emit('chat-message', {
       name,
       text: messageInputRef.current.value,

@@ -3,8 +3,11 @@ function ChatCard([messages]){
     <div className="card-body">
       {messages.length > 0 && 
       messages.map((message) => 
-        <p className="card-text" key={message.id}>{message.text}</p>)
-      }
+        <p className="card-text" key={message.id}>
+          {message.name} says:
+          {message.text}
+          </p>
+          )}
     </div>
   </div>
 }

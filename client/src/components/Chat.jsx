@@ -1,12 +1,11 @@
 import {useState, useEffect, useContext} from 'react';
-import { NameContext } from '../context/NameContext';
+
 import io from 'socket.io-client';
 import ChatForm from './ChatForm'
 import ChatCard from './ChatCard'
 
 
 function Chat(){
-  const {name} = useContext(NameContext)
   const [socket] = useState(io(':8000'))
   const [messages, setMessages] =useState([])
 
@@ -20,8 +19,8 @@ function Chat(){
   }, [socket]);
 
   return <div>
-    <ChatCard />
-    <ChatForm  messages = {messages/>
+    <ChatCard messages = {messages}/>
+    <ChatForm  />
     </div>
 }
 export default Chat;

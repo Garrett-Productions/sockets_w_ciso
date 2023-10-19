@@ -3,9 +3,11 @@ import {NameContext} from "../context/NameContext";
 import {useNavigate} from 'react-router-dom';
 
 
+
 function EnterChat() {
   const nameInputRef = useRef();
   const { setName } = useContext(NameContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     nameInputRef.current.focus(); // input focus
@@ -14,6 +16,8 @@ function EnterChat() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setName(nameInputRef.current.value);
+    localStorage.setItem('name', nameInputRef.current.value);
+    useNavigate('/chat');
   }
 
   return (
