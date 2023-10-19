@@ -31,12 +31,13 @@ Installs(setup)
 - make a new script, scripts: {"dev":" nodemon server.js}
 
 Side Notes
-    in Package.Json {"type":"module"} so that we can have english looking imports instead of const express=require('express')
-    Create .env with PORT variable (PORT = 8000)
-    Whenever you hover over an HTML element, whatever is after the colon is what it's returning,
-    so for sockets, lets catch whatever app.listen is returning in a variable! (const httpServer)
-    npm run dev or nodemon server.js to run the backend
---
+
+    * in Package.Json {"type":"module"} so that we can have english looking imports instead of const express=require('express')
+    * Create .env with PORT variable (PORT = 8000)
+    * Whenever you hover over an HTML element, whatever is after the colon is what it's returning,
+        so for sockets, lets catch whatever app.listen is returning in a variable! (const httpServer)
+    * npm run dev or nodemon server.js to run the backend
+------------------------------------------------------------------------
 
 Server.js
 import chalk from 'chalk'
