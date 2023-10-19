@@ -17,3 +17,7 @@ Server Sides- Video 1 Notes
 - HTTP FORGETS ABOUT EVERYTHING OCNE YOU SEND THAT RESPONSE.
 
 -Sockets give us the ability to listen for events, we're not sending request every minute to check, its always open, and listening 
+-Socket says "hey lemme know when you get a message, I'll receive it automatically."
+
+
+OPENING UP VS
