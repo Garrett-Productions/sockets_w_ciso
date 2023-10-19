@@ -57,7 +57,15 @@ Side Notes
         the callback will tak a paramter, that we get, from our connection event, (socket)
         everytime a new user connects to our socketserver, an ID will be generated, and thats what we are capturing here
     * notes on the callback in io.on
-        when a user hits submit, its going to be a chat message event
+        * when a user hits submit, its going to be a chat message event
+        .on takes in a string event, and a listener function
+        when a user hits a submit is when socket.on('chat-message') is triggered
+        io.on('connection',(socket) => {
+            console.log(chalk.greenBright(`New User connected: ${socket.id}`))
+            socket.on('chat-message', (message) => {
+            console.log(message);
+            }); 
+        });
 ------------------------------------------------------------------------
 
 Server.js
@@ -90,7 +98,7 @@ io.on('connection',(socket) => {
     console.log(chalk.greenBright(`New User connected: ${socket.id}`))
     socket.on('chat-message', (message) => {
         console.log(message);
-    }); // when a user hits submit, its going to be a chat message event
+    }); 
 });
 --------------------------------------------
 
