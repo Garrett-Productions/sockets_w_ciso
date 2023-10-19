@@ -1,5 +1,4 @@
-import {useState, useEffect, useContext} from 'react';
-
+import {useState, useEffect} from 'react';
 import io from 'socket.io-client';
 import ChatForm from './ChatForm'
 import ChatCard from './ChatCard'
@@ -18,9 +17,11 @@ function Chat(){
   return () => socket.off('chat-message'); // clean up function, so our socket turns off
   }, [socket]);
 
-  return <div>
+  return (
+  <>
     <ChatCard messages = {messages}/>
     <ChatForm  />
-    </div>
+    </>
+  );
 }
 export default Chat;

@@ -9,13 +9,13 @@ function EnterChat() {
 
   useEffect(() => {
     nameInputRef.current.focus(); // input focus
-  }, [])
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setName(nameInputRef.current.value);
     localStorage.setItem('name', nameInputRef.current.value);
-    useNavigate('/chat');
+    navigate('/chat');
   }
 
   return (
@@ -23,10 +23,16 @@ function EnterChat() {
     <div className='card-body'>
       <form onSubmit={handleSubmit}>
         <label htmlFor='username' className='form-label'>
-          dsfsdfdsf
+          Ypur name:
         </label>
         <div className='d-flex gap-2'>
-          <input type='text' name='username' id='username' className='form-control' ref={nameInputRef}></input>
+          <input 
+            type='text' 
+            name='username' 
+            id='username' 
+            className='form-control' 
+            ref={nameInputRef}
+            />
           <button type='submit' className='btn btn-primary'>
             SUBMIT
           </button>
