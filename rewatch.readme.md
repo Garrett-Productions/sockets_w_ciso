@@ -56,6 +56,8 @@ Side Notes
         thats the event, then we 'll attach a call back for when its heard
         the callback will tak a paramter, that we get, from our connection event, (socket)
         everytime a new user connects to our socketserver, an ID will be generated, and thats what we are capturing here
+    * notes on the callback in io.on
+        when a user hits submit, its going to be a chat message event
 ------------------------------------------------------------------------
 
 Server.js
