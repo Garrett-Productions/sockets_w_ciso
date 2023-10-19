@@ -12,3 +12,6 @@ import dotenv from 'dotenv'; // .ENV PACKAGE
 import cors from cors -->
 
 Static files like css put in public folder
+
+
+When the web sopcket is closed, I want to close it, literally remove the listener
