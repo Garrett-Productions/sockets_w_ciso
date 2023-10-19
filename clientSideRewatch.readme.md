@@ -9,7 +9,7 @@ Initial setup
 We cleaned up App.jsx and deleted app.css and index.css
 
 Side Notes-overalls-big scale {
-    *Create components
+    *Create components (EnterChat.jsx)
 }
 
 Steps - micro 
@@ -17,6 +17,6 @@ Steps - micro
     with every chat message
 
 function App(){
-    rerurn <div>App</div>
+    return <div>App</div>
 }
 export default App;
