@@ -76,6 +76,9 @@ const io = new SocketServer(httpServer, {
     },
 });
 // now we have an instance setup, so what do we do with it?
+// attach it to an event listener and then have it respond accordingly!
+// pass it the name of the event we are listening for
 
+io.on()
 --------------------------------------------
 
