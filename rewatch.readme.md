@@ -22,6 +22,7 @@ Server Sides - Video 1 Notes(45 min)
 
 OPENING UP VS
 Installs(setup)
+- create server folder
 - Create server.js
 - npm init -y
 - npm i express dotenv socket.io chalk
