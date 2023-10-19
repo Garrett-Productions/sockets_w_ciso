@@ -83,13 +83,6 @@ const io = new SocketServer(httpServer, {
         credentials: true
     },
 });
-// now we have an instance setup, so what do we do with it?
-// attach it to an event listener and then have it respond accordingly!
-// pass it the name of the event we are listening for
-// there is a built in one called 'connection', whenever a client connects to our socket server,
-// thats the event, then we 'll attach a call back for when its heard
-// the callback will tak a paramter, that we get, from our connection event, (socket)
-// everytime a new user connects to our socketserver, an ID will be generated, and thats what we are capturing here
 
 io.on('connection',(socket) => {
     console.log(chalk.greenBright(`New User connected: ${socket.id}`))
