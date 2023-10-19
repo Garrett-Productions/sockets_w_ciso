@@ -25,6 +25,19 @@ Installs(setup)
 - Create server.js
 - npm init -y
 - npm i express dotenv socket.io chalk
+- npm i cors
 - npm i -D nodemon (even if its installed globally, this installs it as a dev dependency )
 
 - make a new script, scripts: {"dev":" nodemon server.js}
+
+Side Note
+    in Package.Json
+    {"type":"module"} so that we can have english looking imports instead of const express=require('express')
+--
+Server.js
+import chalk from 'chalk'
+import dotenv from 'dotenv'
+import express from 'express'
+
+const app = express();
+
