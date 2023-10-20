@@ -42,7 +42,7 @@ const {socket} =useState(is('8000')) // this is the backbone of our backend, thi
     - At this point we have app.jsx decked out, we have two components, enterchat and Chat and we have our context component to capture our name var's in useContext through useRef() to share across app.
     - We have now learned how to unmount our socket, socket.off('chat-message') in a clean up fucntion within our callBack in chat.jsx.
     - We also passed our socket variable into our dependency array to update every time the socket receives a new user
-
+------------We just installed and included socket--------------------------------
 
 Now we need a component to display our chat messages and a form for our user to enter our chat messages
 - ChatCard and chatForm
@@ -51,7 +51,7 @@ Now we need a component to display our chat messages and a form for our user to 
 We created our chatCard component which deconstructs a var called messages. 
 ChatCard is imported within our return statement in Chat.jsx, where it gets {messages, setMessages} passed in as props.
 ChatForm is also imported in the return statement in Chat.jsx
-
+-------------------------------------------------------
 ChatCard.jsx 
 fucntion ChatCard(){
     return (
@@ -59,3 +59,5 @@ fucntion ChatCard(){
     )
 }
 export default ChatCard;
+---------------------------------------------------
+Meanwhile back in server.js above....
