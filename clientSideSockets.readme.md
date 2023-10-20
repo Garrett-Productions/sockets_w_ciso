@@ -29,4 +29,5 @@ const {socket} =useState(is('8000')) // this is the backbone of our backend, thi
 * as soon as this component loads, in useEffect, whenever socket changes we want the useEffect to run, put that in dependency array
 * in useEffect what do we want to listen for?
     event, that you passed into the server to the socket.on function... ('chat-message')
-    now we listen to it on the client side, same way
+    now we listen to it on the client side, same way.
+    when we set state, we use a calback fcuntion that takes in a parameter, prevMessages, and weith the spread operator, appending the new message (message) which is 'chat-message' to the last index in our array!
