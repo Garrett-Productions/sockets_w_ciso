@@ -15,8 +15,11 @@ Side Notes-overalls-big scale {
 }
 
 Steps - micro 
-* form for user to enter their name so they can display ii
+* form component for user to enter their name so they can display it
     with every chat message
+
+
+
 
 ----------------
 function App(){
