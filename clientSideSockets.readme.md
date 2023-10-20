@@ -71,3 +71,5 @@ io.emit emits an event to all connected clients
 socket.broadcast.emit emits an event to all clients other than this particular one, referenced by the socket variable
 socket.emit emits an event directly to this specific client
 --------------------------------
+
+In order to stop our useContext from getting rid of our user's name upon refresh we went ahead and captured the name in local storage and used the getItem and setItem functions which require a key of type string, equal to a value of our useRef's value, aka nameInputRef.current.value //  essentially e.target.value
