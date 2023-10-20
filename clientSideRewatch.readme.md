@@ -96,7 +96,9 @@ function NameContextProvider({children}){
 * we also must create a state variables
 ***** must wrap your entire app in main.jsx in your fucntion with context provider, in our case, <NameContextProvider>
 *** Now we have access to our context across app, like lifted state in a way, so we can now capture the inputted name from the form on EnterChat.jsx in context in our handle submit function! 
+* export content
 
 -----In EnterChat.jsx----
 * also import the useContext from 'react' as well and and {NameContext}! from "../context/NameContext"
-* export content
+const {setName} = useContext(nameContext) 
+now finally in our handleSubmit function, we use that setName with the ref.. setName(nameInputRef.current.value)
