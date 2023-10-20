@@ -59,4 +59,10 @@ fucntion ChatCard(){
 export default ChatCard;
 ***Most inportantly  we import { v4 as uuidv4 } from 'uuid'; and installed npm i uuid on the server side so that we can give each message a unique id 
 ---------------------------------------------------
-Meanwhile back in server.js above....
+Meanwhile back in server.js above.... WE UPDATED IT WITH SOCKET.OFF STUFF AND EMIT()
+
+
+LASTLY..
+we create our chatform.jsx component
+
+stopped at 40 min. 22 min left 
