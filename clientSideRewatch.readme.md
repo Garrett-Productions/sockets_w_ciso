@@ -102,3 +102,17 @@ function NameContextProvider({children}){
 * also import the useContext from 'react' as well and and {NameContext}! from "../context/NameContext"
 const {setName} = useContext(nameContext) 
 now finally in our handleSubmit function, we use that setName with the ref.. setName(nameInputRef.current.value)
+
+-- Bring in react-router-dom, and create 2 routes in app.jsx
+
+Create Chat.jsx
+- we created our app.jsx routes and components and we imported react-router-dom into app.jsx
+ Chat.jsx
+ import {useContext, useState, useEffect} from 'react';
+ import {NameContext} from "../context/NameContext
+
+ function Chat(){
+    const { name } = useContext(NameContext);
+    return <div>Hey</div>;
+ }
+ export default Chat;
