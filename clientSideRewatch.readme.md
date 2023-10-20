@@ -15,6 +15,7 @@ Side Notes-overalls-big scale {
     * useRef is for when useState seems like overkill, and is used when the component mounts for focusing an input
         We have to import {useRef} from 'react', then create a variable from it, then attach our variable of useRef to an html elmement with the attribute of ref = name of created variable 
         useRef ties with useEffect to focus. Ex) useEffect(()=> {nameInputRef.current.focus();}, []);
+    * Emmet Abbreviation for wrapping divs
 }
 
 Steps - micro 
@@ -57,5 +58,9 @@ export default EnterChat;
 * CSS Attributes used:
     card & shadow, card-body
     d-flex justify-content-center align-items-center min-vh-100
+    d-flex gap-2
 
-* We create a form
+??stopped at 12 minutes to focus
+-------------------
+
+Created Context folder in src with NameContext.jsx  where we are using context to capture a name across inputs
