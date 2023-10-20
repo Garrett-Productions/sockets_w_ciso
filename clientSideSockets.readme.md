@@ -49,3 +49,4 @@ Now we need a component to display our chat messages and a form for our user to 
 
 We created our chatCard component which deconstructs a var called messages. 
 ChatCard is imported within our return statement in Chat.jsx, where it gets {messages, setMessages} passed in as props.
+ChatForm is also imported in the return statement in Chat.jsx
