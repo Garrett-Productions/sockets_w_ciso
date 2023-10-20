@@ -13,9 +13,8 @@ Side Notes-overalls-big scale {
     * dark mode - index.html on line 2 data-bs-theme="dark"
     * CSS folder goes into [App > public folder], make sure you put the link of css file in index.html
     * useRef is for when useState seems like overkill, and is used when the component mounts for focusing an input
-        import { useRef } from 'react;
-        create a var from useRef, like we do from useNavigate
-        We have to import {useRef}, thren create a variable from, then attach our variable of useRef to an html elmement with the attribute of ref = name of variable 
+        We have to import {useRef} from 'react', then create a variable from it, then attach our variable of useRef to an html elmement with the attribute of ref = name of created variable 
+        useRef ties teams with useEffect to focus. Ex) useEffect(()=> {nameInputRef.current.focus();}, []);
 }
 
 Steps - micro 
