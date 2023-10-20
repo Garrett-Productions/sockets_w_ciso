@@ -116,3 +116,7 @@ Create Chat.jsx
     return <div>Hey</div>;
  }
  export default Chat;
+
+ NOW WE HAVE APP.JS AND 2 COMPONENTS, WE'VE used useRef, useContext along with useState, useEffect, we were introduced how to pass that context around with .provider and state, and rendering app wide with useContext
+
+ Now Time for Sockets in a separate readme
