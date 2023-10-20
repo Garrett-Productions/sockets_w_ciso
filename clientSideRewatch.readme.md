@@ -91,3 +91,6 @@ function NameContextProvider({children}){
 }
 
 * We use Context to have content available app wide
+* we do this by setting a var = to  const namedContext = createContext({ name: "", setName: ()=> {}})
+* the .provider allows context to share what info you pass into to it, aka our nameContext function thats equal to our createContext object
+* export content
