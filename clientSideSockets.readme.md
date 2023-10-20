@@ -28,6 +28,8 @@ Notes
 const {socket} =useState(is('8000')) // this is the backbone of our backend, this gets our socket server to create the handshake between client and server
 * as soon as this component loads, in useEffect, whenever socket changes we want the useEffect to run, put that in dependency array
 * in useEffect what do we want to listen for?
-    event, that you passed into the server to the socket.on function... ('chat-message')
-    now we listen to it on the client side, same way.
-    when we set state, we use a calback function that takes in a parameter, prevMessages, and weith the spread operator, appending the new message (message) which is 'chat-message' to the last index in our array!
+    - event, that you passed into the server to the socket.on function... ('chat-message')
+    - now we listen to it on the client side, same way.
+    - when we set state, we use a calback function that takes in a parameter, prevMessages, and weith the     spread operator, appending the new message (message) which is 'chat-message' to the last index in our array!
+    
+* Now we want to return a clean function, web socket protocol stays open, so when this component is unmounted, we want to close the socket, literally remove the loistener from the sockets array of listener
