@@ -94,5 +94,9 @@ function NameContextProvider({children}){
 * we do this by setting a var = to  const namedContext = createContext({ name: "", setName: ()=> {}})
 * the .provider allows context to share what info you pass into to it, aka our nameContext function thats equal to our createContext object
 * we also must create a state variables
-***** must wrap ypur entire app in main.jsx in your fucntion with context provider, in our case, <NameContextProvider>
+***** must wrap your entire app in main.jsx in your fucntion with context provider, in our case, <NameContextProvider>
+*** Now we have access to our context across app, like lifted state in a way, so we can now capture the inputted name from the form on EnterChat.jsx in context in our handle submit function! 
+
+-----In EnterChat.jsx----
+* also import the useContext from 'react' as well and and {NameContext}! from "../context/NameContext"
 * export content
