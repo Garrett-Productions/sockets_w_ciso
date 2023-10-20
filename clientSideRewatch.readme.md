@@ -14,7 +14,8 @@ Side Notes-overalls-big scale {
     * CSS folder goes into [App > public folder], make sure you put the link of css file in index.html
     * useRef is for when useState seems like overkill, and is used when the component mounts for focusing an input
         import { useRef } from 'react;
-        }
+        create a var from useRef, like we do from useNavigate
+}
 
 Steps - micro 
 * form component for user to enter their name so they can display it
@@ -42,6 +43,7 @@ function EnterChat(){
     </div>
     )
 }
+// insert form with bootstrap
 export default EnterChat;
 
 ----------------
