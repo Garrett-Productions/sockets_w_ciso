@@ -20,7 +20,6 @@ function ChatForm() {
 
   return (
       <form onSubmit={handleSubmit}>
-        <label htmlFor='user-message' className='form-label'
         <div className='d-flex gap-2'>
           <input type='text' 
             name='user-message' id='user-message' 
