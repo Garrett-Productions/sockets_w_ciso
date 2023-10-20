@@ -89,3 +89,5 @@ function NameContextProvider({children}){
   </NameContext.Provider>
   );
 }
+
+* We use Context to have content available app wide
