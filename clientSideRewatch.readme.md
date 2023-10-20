@@ -14,7 +14,7 @@ Side Notes-overalls-big scale {
     * CSS folder goes into [App > public folder], make sure you put the link of css file in index.html
     * useRef is for when useState seems like overkill, and is used when the component mounts for focusing an input
         We have to import {useRef} from 'react', then create a variable from it, then attach our variable of useRef to an html elmement with the attribute of ref = name of created variable 
-        useRef ties teams with useEffect to focus. Ex) useEffect(()=> {nameInputRef.current.focus();}, []);
+        useRef ties with useEffect to focus. Ex) useEffect(()=> {nameInputRef.current.focus();}, []);
 }
 
 Steps - micro 
@@ -39,9 +39,14 @@ export default App;
 import { useRef } from 'react'
 function EnterChat(){
     const nameInputRef = useRef();
+
+    useEffect(()=> {
+        nameInputRef.current.focus();
+    }, []);
+
     return (
     <div>
-    <form> <input type="text", name="username", id="username", className="form-control", ref={nameInputRef}>
+    <form> <input type="text", name="username", id="username", className="form-control", ref={nameInputRef}> // gonna focus this point
     </div>
     )
 }
