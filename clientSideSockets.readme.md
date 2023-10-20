@@ -66,3 +66,8 @@ LASTLY..
 we create our chatform.jsx component
 
 stopped at 40 min. 22 min left 
+--------------------------------
+io.emit emits an event to all connected clients
+socket.broadcast.emit emits an event to all clients other than this particular one, referenced by the socket variable
+socket.emit emits an event directly to this specific client
+--------------------------------
