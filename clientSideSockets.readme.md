@@ -6,7 +6,12 @@ import {useconetxt, useEffect, usestate}
 function chat(){
     const {name} = useContext(NameContext)
     const {socket} =useState(is('8000'))
-    const [messages, setMessages] = useState([])
+    const [messages, setMessages] = useState([]);
+
+    useEffect(()=> {
+
+    }, [socket])
+
 }
 
 
