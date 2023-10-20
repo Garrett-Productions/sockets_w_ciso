@@ -37,3 +37,6 @@ const {socket} =useState(is('8000')) // this is the backbone of our backend, thi
     
 * Now we want to return a clean function, web socket protocol stays open, so when this component is unmounted, we want to close the socket, literally remove the loistener from the sockets array of listener
     - in the return turn off the socket, no memeory leckage, clean up function!
+
+
+    At this point we have app.jsx decked out, we have two components, enterchat and Chat and we have our context component to capture our name var's in useContext through useRef() to share across app.
