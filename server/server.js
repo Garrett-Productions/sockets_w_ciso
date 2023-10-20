@@ -35,8 +35,8 @@ io.on('connection', (socket) => { // io.on, like an onChange, or onSubmit
         console.log(message);
         const chatMessage = {
             id: uuidv4(), // creating a unique ID w 3rd party package
-            ...message,
+            ...message, // then we grab everything else
         };
-        socket.broadcast.emit('chat-message', chatMessage)
-    });
-});
+        socket.broadcast.emit('chat-message', chatMessage) // now we broadcast! emit broadcasts to all clients except the one the one that sent the message
+    }); // the client is listening for an event called chat-message(socket.on('chat-message')), and the server needs to emil('chat-message') 
+}); //  then key in our map is message.id in chatCard
