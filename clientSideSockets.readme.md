@@ -13,10 +13,13 @@ function chat(){
             console.log(message); // to ensure we grabbed it
             setMessages((prevMessages) => [...prevMessages, message]);
             });
-    }, [socket]);
+            return () => socket.off('chat-message');
+
+        }, [socket]);
 
     return <div>{name}</div>;
 }
+export default Chat;
 
 
 Notes
@@ -33,3 +36,4 @@ const {socket} =useState(is('8000')) // this is the backbone of our backend, thi
     - when we set state, we use a calback function that takes in a parameter, prevMessages, and weith the     spread operator, appending the new message (message) which is 'chat-message' to the last index in our array!
     
 * Now we want to return a clean function, web socket protocol stays open, so when this component is unmounted, we want to close the socket, literally remove the loistener from the sockets array of listener
+    - in the return turn off the socket, no memeory leckage, clean up function!
