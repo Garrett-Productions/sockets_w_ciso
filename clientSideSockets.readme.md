@@ -46,3 +46,6 @@ const {socket} =useState(is('8000')) // this is the backbone of our backend, thi
 
 Now we need a component to display our chat messages and a form for our user to enter our chat messages
 - ChatCard and chatForm
+
+We created our chatCard component which deconstructs a var called messages. 
+ChatCard is imported within our return statement in Chat.jsx, where it gets {messages, setMessages} passed in as props.
