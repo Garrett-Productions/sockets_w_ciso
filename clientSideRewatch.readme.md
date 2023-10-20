@@ -36,10 +36,12 @@ export default App;
 -----------------
 
 -----------------
+import { useRef } from 'react'
 function EnterChat(){
+    const nameInputRef = useRef();
     return (
     <div>
-
+    <form> <input type="text", name="username", id="username", className="form-control", ref={nameInputRef}>
     </div>
     )
 }
