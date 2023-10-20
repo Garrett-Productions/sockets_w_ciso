@@ -41,5 +41,6 @@ export default EnterChat;
 ----------------
 * CSS Attributes used:
     card & shadow, card-body
+    d-flex justify-content-center align-items-center min-vh-100
 
 * We create a form
