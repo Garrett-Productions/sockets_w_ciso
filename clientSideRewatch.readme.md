@@ -15,6 +15,7 @@ Side Notes-overalls-big scale {
     * useRef is for when useState seems like overkill, and is used when the component mounts for focusing an input
         import { useRef } from 'react;
         create a var from useRef, like we do from useNavigate
+        We have to import {useRef}, thren create a variable from, then attach our variable of useRef to an html elmement with the attribute of ref = name of variable 
 }
 
 Steps - micro 
