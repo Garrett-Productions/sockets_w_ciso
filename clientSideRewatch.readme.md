@@ -12,7 +12,9 @@ Side Notes-overalls-big scale {
     *Create components (EnterChat.jsx)
     * dark mode - index.html on line 2 data-bs-theme="dark"
     * CSS folder goes into [App > public folder], make sure you put the link of css file in index.html
-}
+    * useRef is for when useState seems like overkill, and is used when the component mounts for focusing an input
+        import { useRef } from 'react;
+        }
 
 Steps - micro 
 * form component for user to enter their name so they can display it
