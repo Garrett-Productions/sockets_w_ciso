@@ -61,6 +61,31 @@ export default EnterChat;
     d-flex gap-2
 
 ??stopped at 12 minutes to focus
--------------------
+--------------------------------------------------------
 
 Created Context folder in src with NameContext.jsx  where we are using context to capture a name across inputs
+
+NameContext.jsx
+import { createContext, useEffect, useState } from "react";
+
+const NameContext = createContext({
+  name:"",
+  setName: () => {},
+});
+
+function NameContextProvider({children}){
+  const [name, setName] = useState('');
+
+  useEffect(()=> {
+    if (localStorage.getItem('name')) {
+      setName(localStorage.getItem('name'));
+    }
+  }, [name]);
+
+
+  return (
+    <NameContext.Provider value={{name, setName}}>
+      {children}
+  </NameContext.Provider>
+  );
+}
