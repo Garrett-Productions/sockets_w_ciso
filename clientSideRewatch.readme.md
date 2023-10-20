@@ -20,10 +20,14 @@ Steps - micro
 
 
 
-
 ----------------
 function App(){
-    return <div>App</div>
+    * wrap components in CSS chatBox
+    return (
+    <div>
+    <EnterChat />
+    </div>
+    )
 }
 export default App;
 -----------------
