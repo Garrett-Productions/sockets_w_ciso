@@ -34,7 +34,11 @@ export default App;
 
 -----------------
 function EnterChat(){
-    return <div>Enterchat</div>
+    return (
+    <div>
+
+    </div>
+    )
 }
 export default EnterChat;
 
