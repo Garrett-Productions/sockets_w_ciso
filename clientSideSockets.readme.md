@@ -9,9 +9,13 @@ function chat(){
     const [messages, setMessages] = useState([]);
 
     useEffect(()=> {
+        socket.on('chat-message'), (message)=> {
+            console.log(message); // to ensure we grabbed it
+            setMessages((prevMessages) => [...prevMessages, message]);
+            });
+    }, [socket]);
 
-    }, [socket])
-
+    return <div>{name}</div>;
 }
 
 
@@ -22,5 +26,7 @@ Notes
 * create state using thr socket
 * state for messages
 const {socket} =useState(is('8000')) // this is the backbone of our backend, this gets our socket server to create the handshake between client and server
-* as soon as this component loads, in useEffect, whenever socket changes we want the useEffect to run, put that in dpeendency array
-
+* as soon as this component loads, in useEffect, whenever socket changes we want the useEffect to run, put that in dependency array
+* in useEffect what do we want to listen for?
+    event, that you passed into the server to the socket.on function... ('chat-message')
+    now we listen to it on the client side, same way
